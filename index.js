@@ -1,38 +1,42 @@
-'use strict'
-var canvas = document.querySelector('.Mycanvas');
-var con = document.querySelector('.container');
-canvas.width = 0.5 * parseFloat(window.innerWidth);
-canvas.height = 0.5 * parseFloat(window.innerHeight);
+var sm = document.querySelector(".small");
+var tool = document.querySelector(".tool");
+var big = document.querySelector(".big img");
 var temp = false;
-var ctx = canvas.getContext("2d");
-ctx.strkoStyle = "balck";
-canvas.onmouseleave = canvas.onmouseup;
-canvas.onmousemove = function move(e)                                       //鼠标滑动开始绘制
+console.log(sm);
+sm.onmousedown = function display(e)
 {
-    if(temp){
-        let x = parseFloat(e.clientX)-parseFloat(canvas.offsetLeft);
-        let y = parseFloat(e.clientY)-parseFloat(canvas.offsetTop);
-        ctx.lineTo(x,y);
-        ctx.stroke();
+    tool.style.display = 'block';
+    big.style.display = 'block';
+    big.x
+    let x = e.clientX - 50;
+    let y = e.clientY - 50;
+    tool.style.left = x + "px";
+    tool.style.top =  y + "px";
+    big.style.left = -2 * x + 'px';
+    big.style.top = -2 * y + 'px';
+    temp = true;
+}
+document.onmouseup = function hide(e)
+{
+    temp = false;
+    tool.style.display = 'none';
+    big.style.display = 'none';
+}
+document.onmousemove = function move(e)
+{
+    if (temp)
+    {
+        let x = e.clientX - 50;
+        let y = e.clientY - 50;
+        tool.style.left = x + "px";
+        tool.style.top =  y + "px";
+        big.style.left = -2 * x + 'px';
+        big.style.top = -2 * y + 'px';
     }
 }
-canvas.onmousedown = function(e)                                            //鼠标点击开始
+big.onload = function init()
 {
-    temp = true;
-    let x = parseFloat(e.clientX)-parseFloat(canvas.offsetLeft);
-    let y = parseFloat(e.clientY)-parseFloat(canvas.offsetTop);
-    ctx.beginPath();
-    ctx.strkoStyle = "balck";
-    ctx.moveTo(x,y);
-    console.log(x,y);
+    big.width = 2 * sm.offsetWidth;
+    big.height =2 * sm.offsetHeight;
+    console.log (sm.offsetWidth);
 }
-canvas.onmouseup = function(e)                                              //鼠标松开停止
-{
-    let x = parseFloat(e.clientX)-parseFloat(canvas.offsetLeft);
-    let y = parseFloat(e.clientY)-parseFloat(canvas.offsetTop);
-    ctx.lineTo(x,y);
-    ctx.stroke();
-    console.log('end',x,y);
-    temp = false;
-}
-canvas.onmouseleave = canvas.onmouseup;
