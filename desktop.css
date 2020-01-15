@@ -1,0 +1,70 @@
+ body{
+    background: 
+        url(images/纸飞机.jpg) fixed no-repeat;
+    background-color: unset;
+    background-size: 100% 100%;
+}
+
+.menu{
+    background-color: #404040;
+    margin: 0 auto;
+    width: 61%;
+    height: 20%;
+}
+
+.menu h1{
+    text-align: center;
+    width: 100%;
+}
+.menu-list{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.menu-list nav{
+    border: 0.1em solid black;
+    padding: 1%;
+    border-radius: 25%;
+}
+
+.container{
+    position: static;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0.7;
+    z-index: 10;
+}
+
+.left{
+    font-size: 1.5vw;
+}
+
+.left li{
+    line-height: 1.5em;
+    position: relative;
+    left: 2em;
+    list-style-type: disc;
+}
+
+.left h1{
+    text-align: center;
+}
+
+.lchild{
+    width: 100%;
+    overflow: hidden;
+}
+
+.lchild ul li:nth-child(2n){
+    width: 90%;
+    position: relative;
+    left: 3em;
+    text-indent: 0;
+    line-height: 2em;
+    list-style-type: circle;
+}
