@@ -13,7 +13,6 @@ var imgUrls = {
         { "url": "../images/Love is War.jpeg", "name": "Love is War.jpeg" },
         { "url": "../images/Violet Evergarden.jpeg", "name": "Violet Evergarden.jpeg" },
         { "url": "../images/m001.jpg", "name": "001.jpg" },
-        { "url": "../images/m002.jpg", "name": "002.jpg" },
         { "url": "../images/m003.jpg", "name": "003.jpg" },
         { "url": "../images/m004.jpg", "name": "004.jpg" },
         { "url": "../images/Anime001.png", "name": "Anime001.png" },
@@ -75,6 +74,7 @@ function Load(i)                                                //给图片定�
         images[i].src = imgUrls.urls[i].url;
         images[i].alt = imgUrls.urls[i].name;
         images[i].style.width = imgWidth + "px";
+        images[i].style.display = "block";
         let x = parseFloat(imgHeight[0]);
         let y = 0;
         for (let m = 1; m < imgHeight.length; m++)

@@ -25,6 +25,7 @@ body{
     border: 2px solid white;
     padding: 1px;
     position: absolute;
+    display: none;
 }
 
 .main-part img:hover{
