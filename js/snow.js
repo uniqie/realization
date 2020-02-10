@@ -20,6 +20,7 @@
 
     window.onresize = function() {
         canvasResize();
+        contain.style.height = window.innerHeight - 60 + 'px';
     };
 
     var MyMath = Math;

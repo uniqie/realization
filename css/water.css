@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.container{
+    min-height: 100%;
+}
+
+.main-part{
+    position: relative;
+    height: auto;
+}
+
+.main-part img{
+    border: 2px solid white;
+    padding: 1px;
+    position: absolute;
+}
+
+#imgView{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    text-align: center;
+}
+
+#imgView img{
+    opacity: 1;
+    background-color: white;
+    border: solid black 0.5px;
+    z-index: 100;
+}
