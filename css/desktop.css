@@ -67,9 +67,9 @@ body{
 }
 
 .lchild li {
+    left: 130px;
     line-height: 1.5em;
     position: relative;
-    left: 2em;
     list-style-type: disc;
     font-size: 1.5em;
 }
@@ -85,7 +85,7 @@ body{
 
 .introduction p{
     margin: 0 auto;
-    width: 95%;
+    width: 850px;
 }
 
 .befo{
@@ -97,15 +97,15 @@ body{
 .lchild ul li:nth-child(2n) {
     color: rgba(95, 158, 160, 0.918);
     position: relative;
-    left: 3em;
+    left: 180px;
     width: auto;
     text-indent: 0;
-    font-size: 1.2em;
+    font-size: 20px;
     line-height: 1.5em;
     list-style-type: circle;
     font-family: bn;
 }
 
-hr{
+hr{  
     border-color: gray;
 }
