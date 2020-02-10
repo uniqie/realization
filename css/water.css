@@ -27,6 +27,10 @@ body{
     position: absolute;
 }
 
+.main-part img:hover{
+    cursor: pointer;
+}
+
 #imgView{
     display: none;
     position: fixed;

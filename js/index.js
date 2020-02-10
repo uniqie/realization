@@ -52,10 +52,10 @@ var IFRA = function (obj,i) {
     if(x == y) return;
     else iframe.src = iframeOBJ.urls[i].url;
     for(let j = 0 ; j < nav.length ; j++){
-        nav[j].style.boxShadow = "grey -1px -1px 1px inset";
+        nav[j].style.boxShadow = "grey -2px -2px 2.5px inset";
         nav[j].style.color = "rgb(155, 155, 155)";
     }
-    obj.style.boxShadow = "inset -1px -1px 1px white";
+    obj.style.boxShadow = "inset -2px -2px 2.5px white";
     obj.style.color = "ghostwhite";
     localStorage.page = i;
 }

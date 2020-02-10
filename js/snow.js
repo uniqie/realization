@@ -44,7 +44,7 @@
             t.y += t.velY;
             ctx.beginPath();
             ctx.arc(t.x, t.y, t.radius, 0, 2 * MyMath.PI, !1);
-            ctx.fillStyle = "orange";
+            ctx.fillStyle = "white";
             ctx.fill()
         };
 
